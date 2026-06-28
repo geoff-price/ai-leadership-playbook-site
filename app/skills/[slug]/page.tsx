@@ -26,8 +26,8 @@ export default async function SkillPage({ params }: { params: Promise<{ slug: st
       <Masthead />
 
       <article className="wrap py-14 md:py-20">
-        <Link href="/#playbook" className="arrow-link mb-10 inline-flex" style={{ color: "var(--ink-faint)" }}>
-          ← The Plays
+        <Link href="/#tools" className="arrow-link mb-10 inline-flex" style={{ color: "var(--ink-faint)" }}>
+          ← Tools
         </Link>
 
         {/* Header */}
@@ -38,7 +38,7 @@ export default async function SkillPage({ params }: { params: Promise<{ slug: st
               {s.title}
             </h1>
             <p className="mt-3 font-mono text-xs uppercase tracking-[0.16em] text-ink-faint">
-              after {s.author} · {s.book}
+              {s.author} · {s.book}
             </p>
           </div>
         </header>
@@ -46,23 +46,21 @@ export default async function SkillPage({ params }: { params: Promise<{ slug: st
         {/* Two-column: summary + actions */}
         <div className="grid gap-12 py-12 md:grid-cols-[1fr_0.85fr] md:gap-16">
           <div>
-            <p className="eyebrow mb-5">The Idea</p>
+            <p className="eyebrow mb-5">The idea</p>
             <div className="space-y-5 text-[1.12rem] leading-relaxed">
               {s.summary.map((p, i) => (
-                <p key={i} className={i === 0 ? "dropcap" : undefined}>
-                  {p}
-                </p>
+                <p key={i}>{p}</p>
               ))}
             </div>
           </div>
 
           {/* Run it */}
           <aside className="md:border-l md:border-rule md:pl-12">
-            <p className="eyebrow mb-5">Run it on your own AI</p>
+            <p className="eyebrow mb-5">Run it on your AI</p>
             <p className="mb-6 text-ink-soft">
-              Copy the prompt into ChatGPT, Claude, or Copilot. It interviews you about a real
-              decision and returns a one-pager built on your situation. Free — it runs on your
-              AI, not ours.
+              Copy the prompt into ChatGPT, Claude, or Copilot. It asks you about a real
+              decision and returns a one-page answer built on your situation. It’s free — it
+              runs on your AI, not ours.
             </p>
 
             <div className="mb-6 max-h-72 overflow-auto border border-rule bg-paper-deep/50 p-5 font-mono text-[0.78rem] leading-relaxed text-ink-soft whitespace-pre-wrap">
@@ -80,9 +78,9 @@ export default async function SkillPage({ params }: { params: Promise<{ slug: st
             </div>
 
             <p className="mt-8 border-t border-rule pt-6 text-ink-soft">
-              This is one idea from a book full of them.{" "}
+              This is one idea from the book. If it helps,{" "}
               <a href={s.bookUrl} className="link-underline text-ink">
-                Read {s.book}
+                read the rest
               </a>
               .
             </p>
@@ -92,12 +90,9 @@ export default async function SkillPage({ params }: { params: Promise<{ slug: st
         {/* inline subscribe */}
         <div className="rule-double pt-10">
           <div className="grid gap-6 md:grid-cols-[1fr_1fr] md:items-end">
-            <div>
-              <p className="eyebrow mb-2">Get the next play</p>
-              <p className="display-lg" style={{ fontSize: "clamp(1.6rem,3vw,2.2rem)" }}>
-                One durable idea, made usable.
-              </p>
-            </div>
+            <p className="display-lg" style={{ fontSize: "clamp(1.6rem,3vw,2.2rem)" }}>
+              Get the next tool.
+            </p>
             <EmailForm />
           </div>
         </div>

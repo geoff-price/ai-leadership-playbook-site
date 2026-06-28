@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function CopyButton({ text, label = "Copy the prompt" }: { text: string; label?: string }) {
+export default function CopyButton({ text, label = "Copy prompt" }: { text: string; label?: string }) {
   const [copied, setCopied] = useState(false);
 
   async function copy() {

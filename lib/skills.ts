@@ -22,7 +22,7 @@ export const skills: Skill[] = [
     book: "Good Strategy/Bad Strategy",
     author: "Richard Rumelt",
     oneLiner:
-      "Pressure-test an AI roadmap against Rumelt’s kernel — and catch “bad strategy” before it gets funded.",
+      "Pressure-test an AI roadmap against Rumelt’s test for real strategy — and catch the bad kind before it gets funded.",
     summary: [
       "Most “AI strategies” are ambitions with a deadline: a number on a slide with no account of the obstacle in the way. Rumelt calls that bad strategy — not the absence of strategy, but a convincing imposter.",
       "Good strategy has a kernel: a diagnosis that names the real problem, a guiding policy for how you’ll deal with it, and coherent actions that reinforce each other.",
