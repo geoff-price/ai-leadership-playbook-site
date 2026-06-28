@@ -36,9 +36,9 @@ export default async function SkillPage({ params }: { params: Promise<{ slug: st
           </p>
         </header>
 
-        {/* The idea — the value, shared plainly */}
+        {/* The essay — the writing itself (canonical home; syndicated to LinkedIn) */}
         <div className="mt-10 space-y-5 text-[1.12rem] leading-relaxed">
-          {s.summary.map((p, i) => (
+          {s.essay.map((p, i) => (
             <p key={i}>{p}</p>
           ))}
         </div>

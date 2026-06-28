@@ -5,7 +5,7 @@ export type Skill = {
   book: string;
   author: string;
   oneLiner: string;
-  summary: string[];
+  essay: string[];
   prompt: string;
   repoUrl: string;
   bookUrl: string;
@@ -23,10 +23,13 @@ export const skills: Skill[] = [
     author: "Richard Rumelt",
     oneLiner:
       "Pressure-test an AI roadmap against Rumelt’s test for real strategy — and catch the bad kind before it gets funded.",
-    summary: [
-      "Most “AI strategies” are ambitions with a deadline: a number on a slide with no account of the obstacle in the way. Rumelt calls that bad strategy — not the absence of strategy, but a convincing imposter.",
-      "Good strategy has a kernel: a diagnosis that names the real problem, a guiding policy for how you’ll deal with it, and coherent actions that reinforce each other.",
-      "This tool interviews you about a real initiative, refuses to build on slogans, and returns a strategy kernel built on your situation — or tells you plainly when your thinking is already sound.",
+    essay: [
+      "Most “AI strategies” I see aren’t strategies. They’re ambitions with a deadline.",
+      "Richard Rumelt tells a story about a CEO, proud of his plan: grow revenue 20% a year, hold a 20% margin. He called it the 2020 plan, and the whole team had bought in. When Rumelt asked how, the CEO talked about will to win and aiming high.",
+      "His verdict: that’s not a strategy. It’s ambition — a goal with no account of the obstacle in the way, and no read on where the leverage is.",
+      "Swap the numbers and you have most AI roadmaps. “Become an AI-first company.” “20% productivity from GenAI by Q4.” The discipline didn’t change when the technology did. We just stopped naming the obstacle.",
+      "Strategy starts a step back, with a diagnosis — the real problem, in one sentence. “Our people don’t trust the output enough to change how they work” is a diagnosis. “Drive AI adoption” is a wish.",
+      "Take your top AI initiative and write the diagnosis beneath it: the obstacle, not the goal. If you can’t, it’s a roadmap, not a strategy.",
     ],
     prompt: `You are a strategy coach built on one durable idea from *Good Strategy/Bad Strategy* by Richard Rumelt.
 
