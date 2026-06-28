@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import Masthead from "@/components/Masthead";
 import Footer from "@/components/Footer";
 import CopyButton from "@/components/CopyButton";
-import EmailForm from "@/components/EmailForm";
 import { getSkill, skills } from "@/lib/skills";
 
 export function generateStaticParams() {
@@ -25,77 +24,52 @@ export default async function SkillPage({ params }: { params: Promise<{ slug: st
     <>
       <Masthead />
 
-      <article className="wrap py-14 md:py-20">
-        <Link href="/#tools" className="arrow-link mb-10 inline-flex" style={{ color: "var(--ink-faint)" }}>
-          ← Tools
+      <article className="wrap pt-14 pb-16">
+        <Link href="/" className="meta hover:text-accent">
+          ← Back
         </Link>
 
-        {/* Header */}
-        <header className="grid gap-3 border-b border-ink pb-8 md:grid-cols-[5rem_1fr] md:gap-8">
-          <span className="font-mono text-4xl text-ink-faint">{s.no}</span>
-          <div>
-            <h1 className="display-xl" style={{ fontSize: "clamp(2.4rem,5.5vw,4.4rem)" }}>
-              {s.title}
-            </h1>
-            <p className="mt-3 font-mono text-xs uppercase tracking-[0.16em] text-ink-faint">
-              {s.author} · {s.book}
-            </p>
-          </div>
+        <header className="mt-10">
+          <h1 className="text-[2rem] leading-tight md:text-[2.6rem]">{s.title}</h1>
+          <p className="meta mt-2">
+            {s.author} · {s.book}
+          </p>
         </header>
 
-        {/* Two-column: summary + actions */}
-        <div className="grid gap-12 py-12 md:grid-cols-[1fr_0.85fr] md:gap-16">
-          <div>
-            <p className="eyebrow mb-5">The idea</p>
-            <div className="space-y-5 text-[1.12rem] leading-relaxed">
-              {s.summary.map((p, i) => (
-                <p key={i}>{p}</p>
-              ))}
-            </div>
-          </div>
-
-          {/* Run it */}
-          <aside className="md:border-l md:border-rule md:pl-12">
-            <p className="eyebrow mb-5">Run it on your AI</p>
-            <p className="mb-6 text-ink-soft">
-              Copy the prompt into ChatGPT, Claude, or Copilot. It asks you about a real
-              decision and returns a one-page answer built on your situation. It’s free — it
-              runs on your AI, not ours.
-            </p>
-
-            <div className="mb-6 max-h-72 overflow-auto border border-rule bg-paper-deep/50 p-5 font-mono text-[0.78rem] leading-relaxed text-ink-soft whitespace-pre-wrap">
-              {s.prompt}
-            </div>
-
-            <div className="flex flex-wrap gap-3">
-              <CopyButton text={s.prompt} />
-              <a
-                href={s.repoUrl}
-                className="inline-flex items-center gap-2 border border-ink px-5 py-3 font-mono text-xs uppercase tracking-[0.16em] text-ink transition-colors hover:bg-ink hover:text-paper"
-              >
-                Get the Claude skill →
-              </a>
-            </div>
-
-            <p className="mt-8 border-t border-rule pt-6 text-ink-soft">
-              This is one idea from the book. If it helps,{" "}
-              <a href={s.bookUrl} className="link-underline text-ink">
-                read the rest
-              </a>
-              .
-            </p>
-          </aside>
+        {/* The idea — the value, shared plainly */}
+        <div className="mt-10 space-y-5 text-[1.12rem] leading-relaxed">
+          {s.summary.map((p, i) => (
+            <p key={i}>{p}</p>
+          ))}
         </div>
 
-        {/* inline subscribe */}
-        <div className="rule-double pt-10">
-          <div className="grid gap-6 md:grid-cols-[1fr_1fr] md:items-end">
-            <p className="display-lg" style={{ fontSize: "clamp(1.6rem,3vw,2.2rem)" }}>
-              Get the next tool.
-            </p>
-            <EmailForm />
+        {/* Apply it */}
+        <section className="mt-14 border-t border-line pt-10">
+          <h2 className="meta mb-4">Apply it</h2>
+          <p className="mb-6 max-w-[58ch] text-soft">
+            Copy this into ChatGPT, Claude, or Copilot. It asks you about a real decision and
+            gives you back a one-page answer for your situation. It runs on your AI, not mine.
+          </p>
+
+          <div className="mb-5 max-h-72 overflow-auto border border-line bg-black/20 p-5 font-mono text-[0.78rem] leading-relaxed text-soft whitespace-pre-wrap">
+            {s.prompt}
           </div>
-        </div>
+
+          <div className="flex flex-wrap items-center gap-4">
+            <CopyButton text={s.prompt} />
+            <a href={s.repoUrl} className="meta hover:text-accent">
+              Or take the full skill →
+            </a>
+          </div>
+
+          <p className="mt-10 text-soft">
+            This is one idea from the book. If it’s useful,{" "}
+            <a href={s.bookUrl} className="link">
+              read the rest
+            </a>
+            .
+          </p>
+        </section>
       </article>
 
       <Footer />

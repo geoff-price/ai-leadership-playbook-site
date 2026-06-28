@@ -1,18 +1,11 @@
 import type { Metadata } from "next";
-import { Fraunces, Newsreader, JetBrains_Mono } from "next/font/google";
+import { Hanken_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const fraunces = Fraunces({
+const sans = Hanken_Grotesk({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-display",
-});
-
-const newsreader = Newsreader({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-body",
-  style: ["normal", "italic"],
+  variable: "--font-sans",
 });
 
 const mono = JetBrains_Mono({
@@ -24,17 +17,14 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "AI Leadership Playbook",
   description:
-    "AI is an operating-model problem, not a tool problem. Practical decision tools for AI leaders — one durable book idea at a time.",
+    "Ideas worth keeping from books on strategy and leadership — each with a prompt you can run on your own AI to put it to work.",
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      className={`${fraunces.variable} ${newsreader.variable} ${mono.variable} h-full antialiased`}
-    >
+    <html lang="en" className={`${sans.variable} ${mono.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

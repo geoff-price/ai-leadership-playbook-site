@@ -18,10 +18,9 @@ export default function CopyButton({ text, label = "Copy prompt" }: { text: stri
   return (
     <button
       onClick={copy}
-      className="group inline-flex items-center gap-2 bg-ink px-5 py-3 font-mono text-xs uppercase tracking-[0.16em] text-paper transition-colors hover:bg-oxblood"
+      className="meta border border-line px-4 py-2.5 text-text transition-colors hover:border-accent hover:text-accent"
     >
-      {copied ? "✓ Copied — paste into your AI" : label}
-      {!copied && <span className="transition-transform group-hover:translate-x-1">→</span>}
+      {copied ? "✓ Copied" : label}
     </button>
   );
 }

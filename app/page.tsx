@@ -10,59 +10,33 @@ export default function Home() {
     <>
       <Masthead />
 
-      {/* Hero */}
-      <section className="wrap pt-20 pb-16 md:pt-28 md:pb-20">
-        <h1 className="display-xl max-w-[15ch] reveal" style={{ animationDelay: "60ms" }}>
-          AI is an <span className="text-oxblood">operating-model</span> problem, not a tool problem.
-        </h1>
-        <p className="lede mt-8 max-w-2xl reveal" style={{ animationDelay: "170ms" }}>
-          Each tool here runs on your own AI — ChatGPT, Claude, or Copilot. It asks about a
-          real decision and hands back a one-page answer built on your situation.
+      {/* Intro — plain, first person, no pitch */}
+      <section className="wrap pt-16 pb-14 md:pt-24">
+        <p className="reveal max-w-[34ch] text-2xl leading-snug md:text-[1.9rem]" style={{ animationDelay: "60ms" }}>
+          Twenty years of reading on strategy and leadership, kept to the ideas that still
+          hold up.
         </p>
-        <div className="mt-9 reveal" style={{ animationDelay: "260ms" }}>
-          <Link href="#tools" className="arrow-link">
-            See the tools <span className="arr">→</span>
-          </Link>
-        </div>
+        <p className="reveal mt-6 max-w-[52ch] text-soft" style={{ animationDelay: "160ms" }}>
+          For each one, a short prompt you can run on your own AI to put the idea to work on
+          something you’re actually deciding. Take what’s useful.
+        </p>
       </section>
 
-      {/* Tools */}
-      <section id="tools" className="wrap pb-20 md:pb-28">
-        <div className="border-b border-ink pb-4">
-          <h2 className="display-lg">Tools</h2>
-        </div>
-
-        <ol>
+      {/* The ideas */}
+      <section className="wrap pb-20">
+        <ol className="border-t border-line">
           {live.map((s) => (
-            <li key={s.slug} className="group border-b border-rule">
-              <Link
-                href={`/skills/${s.slug}`}
-                className="grid items-start gap-4 py-9 md:grid-cols-[4rem_1fr_auto] md:gap-8"
-              >
-                <span className="font-mono text-2xl text-ink-faint md:text-3xl">{s.no}</span>
-                <div className="max-w-2xl">
-                  <h3 className="display-lg leading-none transition-colors group-hover:text-oxblood">
-                    {s.title}
-                  </h3>
-                  <p className="mt-2 font-mono text-xs uppercase tracking-[0.14em] text-ink-faint">
-                    {s.author}
-                  </p>
-                  <p className="mt-4 text-ink-soft">{s.oneLiner}</p>
-                </div>
-                <span className="arrow-link md:pt-3">
-                  Open <span className="arr">→</span>
-                </span>
+            <li key={s.slug}>
+              <Link href={`/skills/${s.slug}`} className="group block border-b border-line py-7">
+                <h2 className="text-[1.5rem] leading-tight transition-colors group-hover:text-accent">
+                  {s.title}
+                </h2>
+                <p className="meta mt-1.5">{s.author}</p>
+                <p className="mt-3 max-w-[60ch] text-soft">{s.oneLiner}</p>
               </Link>
             </li>
           ))}
         </ol>
-
-        <p className="mt-8 text-ink-soft">
-          More coming.{" "}
-          <Link href="#newsletter" className="link-underline text-ink">
-            Subscribe to get the next one.
-          </Link>
-        </p>
       </section>
 
       <Footer />

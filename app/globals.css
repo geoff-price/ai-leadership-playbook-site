@@ -1,130 +1,74 @@
 @import "tailwindcss";
 
 /* ───────────────────────────────────────────────────────────
-   AI LEADERSHIP PLAYBOOK — "executive broadsheet"
-   Warm paper · near-black ink · single oxblood accent.
+   AI LEADERSHIP PLAYBOOK
+   Quiet, dark, understated. A place to share ideas — not sell.
    ─────────────────────────────────────────────────────────── */
 
 :root {
-  --paper: #f4efe4;
-  --paper-deep: #ece5d6;
-  --ink: #15120d;
-  --ink-soft: #4a443a;
-  --ink-faint: #8b8270;
-  --oxblood: #8a2b22;
-  --oxblood-deep: #6f2019;
-  --rule: rgba(21, 18, 13, 0.16);
-  --rule-soft: rgba(21, 18, 13, 0.08);
+  --bg: #0d0d0e;
+  --text: #ece9e1;
+  --soft: #9a968b;
+  --faint: #615d54;
+  --accent: #d24b3a;
+  --line: rgba(236, 233, 225, 0.12);
+  --line-soft: rgba(236, 233, 225, 0.07);
 }
 
 @theme inline {
-  --color-paper: var(--paper);
-  --color-paper-deep: var(--paper-deep);
-  --color-ink: var(--ink);
-  --color-ink-soft: var(--ink-soft);
-  --color-ink-faint: var(--ink-faint);
-  --color-oxblood: var(--oxblood);
-  --color-rule: var(--rule);
-  --font-display: var(--font-display);
-  --font-body: var(--font-body);
+  --color-bg: var(--bg);
+  --color-text: var(--text);
+  --color-soft: var(--soft);
+  --color-faint: var(--faint);
+  --color-accent: var(--accent);
+  --color-line: var(--line);
+  --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
 }
 
-html {
-  background: var(--paper);
-}
+html { background: var(--bg); }
 
 body {
-  background-color: var(--paper);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
-  color: var(--ink);
-  font-family: var(--font-body), Georgia, serif;
+  background-color: var(--bg);
+  background-image: radial-gradient(120% 80% at 50% -10%, rgba(236, 233, 225, 0.05), transparent 60%);
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: var(--font-sans), system-ui, sans-serif;
   font-size: 1.0625rem;
   line-height: 1.65;
+  letter-spacing: -0.01em;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
-::selection {
-  background: var(--oxblood);
-  color: var(--paper);
-}
+::selection { background: var(--accent); color: var(--bg); }
 
-/* Typography roles ------------------------------------------------ */
-.font-display { font-family: var(--font-display), Georgia, serif; }
 .font-mono { font-family: var(--font-mono), ui-monospace, monospace; }
 
-.eyebrow {
+.meta {
   font-family: var(--font-mono), monospace;
   font-size: 0.7rem;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--ink-faint);
+  color: var(--faint);
 }
 
-.display-xl {
-  font-family: var(--font-display), Georgia, serif;
-  font-weight: 600;
-  line-height: 0.98;
-  letter-spacing: -0.02em;
-  font-size: clamp(2.7rem, 7.5vw, 6.4rem);
-}
+.accent { color: var(--accent); }
 
-.display-lg {
-  font-family: var(--font-display), Georgia, serif;
-  font-weight: 600;
-  line-height: 1.02;
-  letter-spacing: -0.015em;
-  font-size: clamp(2rem, 4.4vw, 3.4rem);
-}
-
-.lede {
-  font-size: clamp(1.15rem, 1.9vw, 1.5rem);
-  line-height: 1.5;
-  color: var(--ink-soft);
-}
-
-/* Rules & ornaments --------------------------------------------- */
-.rule { border-top: 1px solid var(--rule); }
-.rule-soft { border-top: 1px solid var(--rule-soft); }
-.rule-double { border-top: 3px double var(--rule); }
-
-.dropcap::first-letter {
-  font-family: var(--font-display), Georgia, serif;
-  float: left;
-  font-size: 4.6rem;
-  line-height: 0.74;
-  font-weight: 600;
-  padding: 0.06em 0.12em 0 0;
-  color: var(--oxblood);
-}
-
-.link-underline {
-  background-image: linear-gradient(var(--oxblood), var(--oxblood));
+.link {
+  color: var(--text);
+  background-image: linear-gradient(var(--accent), var(--accent));
   background-size: 100% 1px;
   background-position: 0 100%;
   background-repeat: no-repeat;
   transition: background-size 0.25s ease;
 }
-.link-underline:hover { background-size: 0% 1px; }
-
-.arrow-link {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 0.45em;
-  color: var(--oxblood);
-  font-family: var(--font-mono), monospace;
-  font-size: 0.78rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-.arrow-link .arr { transition: transform 0.25s ease; }
-.arrow-link:hover .arr { transform: translateX(0.35em); }
+.link:hover { background-size: 0% 1px; }
 
 @keyframes rise {
-  from { opacity: 0; transform: translateY(14px); }
+  from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
-.reveal { opacity: 0; animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) forwards; }
+.reveal { opacity: 0; animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) forwards; }
 
-.wrap { width: 100%; max-width: 76rem; margin-inline: auto; padding-inline: clamp(1.25rem, 4vw, 3.5rem); }
+.wrap { width: 100%; max-width: 46rem; margin-inline: auto; padding-inline: clamp(1.25rem, 5vw, 2.5rem); }
