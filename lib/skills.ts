@@ -50,7 +50,7 @@ YOUR JOB:
 
 Begin now.`,
     repoUrl: `${REPO}/tree/main/skills/good-strategy-bad-strategy`,
-    bookUrl: "https://www.amazon.com/dp/0593162927",
+    bookUrl: "https://www.amazon.com/dp/0307886239",
     status: "live",
   },
 ];
