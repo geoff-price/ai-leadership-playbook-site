@@ -26,11 +26,12 @@
   --font-mono: var(--font-mono);
 }
 
-html { background: var(--bg); }
+html { background: var(--bg); scroll-behavior: smooth; }
 
 body {
+  position: relative;
   background-color: var(--bg);
-  background-image: radial-gradient(120% 80% at 50% -10%, rgba(236, 233, 225, 0.05), transparent 60%);
+  background-image: radial-gradient(120% 80% at 50% -10%, rgba(236, 233, 225, 0.055), transparent 60%);
   background-attachment: fixed;
   color: var(--text);
   font-family: var(--font-sans), system-ui, sans-serif;
@@ -41,7 +42,31 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* faint grain for depth — atmosphere, not texture you notice */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.4;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+}
+body > * { position: relative; z-index: 1; }
+
 ::selection { background: var(--accent); color: var(--bg); }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+
+/* thin, themed scrollbars (e.g. the prompt box) */
+* { scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
+::-webkit-scrollbar { width: 9px; height: 9px; }
+::-webkit-scrollbar-thumb { background: rgba(236, 233, 225, 0.16); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(236, 233, 225, 0.28); }
 
 .font-mono { font-family: var(--font-mono), ui-monospace, monospace; }
 
