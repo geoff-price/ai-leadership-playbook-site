@@ -47,20 +47,31 @@ export default async function SkillPage({ params }: { params: Promise<{ slug: st
         <section className="mt-14 border-t border-line pt-10">
           <h2 className="meta mb-4">Apply it</h2>
           <p className="mb-6 max-w-[58ch] text-soft">
-            Copy this into ChatGPT, Claude, or Copilot. It asks you about a real decision and
-            gives you back a one-page answer for your situation. It runs on your AI, not mine.
+            Copy it into ChatGPT, Claude, or Copilot and answer its questions — it interviews
+            you about a real decision and hands back a one-page answer for your situation.
+            It’ll ask you a few things first; that’s how it gets built around your situation.
+            It runs on your AI, not mine.
           </p>
 
           <div className="mb-5 max-h-72 overflow-auto border border-line bg-black/20 p-5 font-mono text-[0.78rem] leading-relaxed text-soft whitespace-pre-wrap">
             {s.prompt}
           </div>
 
-          <div className="flex flex-wrap items-center gap-4">
-            <CopyButton text={s.prompt} />
-            <a href={s.repoUrl} className="meta hover:text-accent">
-              Or take the full skill →
+          <CopyButton text={s.prompt} />
+
+          <p className="meta mt-5">
+            Use Claude with{" "}
+            <a
+              href="https://support.claude.com/en/articles/12512180-use-skills-in-claude"
+              className="hover:text-accent"
+            >
+              Skills
             </a>
-          </div>
+            ?{" "}
+            <a href={s.repoUrl} className="hover:text-accent">
+              Install the full skill →
+            </a>
+          </p>
 
           <p className="mt-10 text-soft">
             This is one idea from the book. If it’s useful,{" "}
