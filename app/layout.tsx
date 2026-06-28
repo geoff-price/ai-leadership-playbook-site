@@ -15,9 +15,9 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AI Leadership Playbook",
+  title: "Geoff Price — AI leadership",
   description:
-    "Ideas worth keeping from books on strategy and leadership — each with a prompt you can run on your own AI to put it to work.",
+    "Notes on AI leadership: ideas worth keeping from books on strategy and leadership, each with a prompt you can run on your own AI to put it to work.",
 };
 
 export default function RootLayout({

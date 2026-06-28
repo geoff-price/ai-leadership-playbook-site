@@ -7,7 +7,7 @@ export default function Footer() {
         <a href={repoUrl} className="meta hover:text-accent">
           GitHub
         </a>
-        <span className="meta">© {new Date().getFullYear()}</span>
+        <span className="meta">© {new Date().getFullYear()} Geoff Price</span>
       </div>
     </footer>
   );

@@ -12,7 +12,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const s = getSkill(slug);
-  return { title: s ? `${s.title} — AI Leadership Playbook` : "AI Leadership Playbook" };
+  return { title: s ? `${s.title} — Geoff Price` : "Geoff Price — AI leadership" };
 }
 
 export default async function SkillPage({ params }: { params: Promise<{ slug: string }> }) {
