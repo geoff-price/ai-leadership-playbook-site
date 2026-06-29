@@ -5,6 +5,7 @@ export type Skill = {
   book: string;
   author: string;
   oneLiner: string;
+  year: string;
   essay: string[];
   prompt: string;
   repoUrl: string;
@@ -23,6 +24,7 @@ export const skills: Skill[] = [
     author: "Richard Rumelt",
     oneLiner:
       "Pressure-test an AI roadmap against Rumelt’s test for real strategy — and catch the bad kind before it gets funded.",
+    year: "2011",
     essay: [
       "Most “AI strategies” I see aren’t strategies. They’re ambitions with a deadline.",
       "Richard Rumelt tells a story about a CEO, proud of his plan: grow revenue 20% a year, hold a 20% margin. He called it the 2020 plan, and the whole team had bought in. When Rumelt asked how, the CEO talked about will to win and aiming high.",

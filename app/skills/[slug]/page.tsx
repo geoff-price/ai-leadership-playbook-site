@@ -32,7 +32,7 @@ export default async function SkillPage({ params }: { params: Promise<{ slug: st
         <header className="mt-10">
           <h1 className="text-[2rem] leading-tight md:text-[2.6rem]">{s.title}</h1>
           <p className="meta mt-2">
-            {s.author} · {s.book}
+            {s.author} · {s.year}
           </p>
         </header>
 

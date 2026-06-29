@@ -39,7 +39,7 @@ export default function Home() {
                   <h2 className="text-[1.5rem] leading-tight transition-colors group-hover:text-accent">
                     {s.title}
                   </h2>
-                  <p className="meta mt-1.5">{s.author}</p>
+                  <p className="meta mt-1.5">{s.author} · {s.year}</p>
                   <p className="mt-3 max-w-[60ch] text-soft">{s.oneLiner}</p>
                 </div>
                 <span
