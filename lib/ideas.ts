@@ -60,6 +60,53 @@ Begin now.`,
     bookUrl: "https://www.amazon.com/dp/0307886239",
     status: "live",
   },
+  {
+    no: "02",
+    slug: "measure-what-matters",
+    title: "Measure What Matters",
+    book: "Measure What Matters",
+    author: "John Doerr",
+    subtitle: "How Google, Bono, and the Gates Foundation Rock the World with OKRs",
+    reachWhen:
+      "your AI “OKRs” are really a list of pilots and launches with numbers bolted on",
+    oneLiner:
+      "Turns your AI goal into a real OKR — and catches activity dressed up as a result.",
+    year: "2018",
+    essay: [
+      "Most “AI OKRs” I see are KPIs in a costume — a list of activity (pilots launched, licenses bought, models shipped) with a number bolted on. That’s not what Andy Grove built.",
+      "Quick history, because it explains the rules. In 1954 Peter Drucker gave us Management by Objectives: set goals with people, not at them. Good idea that calcified — annual, private, top-down, and tied to your bonus, so nobody took risks. At Intel in the 1970s, Grove rebuilt it. He kept the objective and added the part everyone forgets — the key result — then flipped the rest: quarterly not annual, public not private, bottom-up not cascaded, and divorced from pay so people would actually reach. John Doerr learned it at Grove’s elbow and in 1999 carried it to a 30-person startup called Google. Still how they run.",
+      "Here’s the whole machine. An Objective is what you want — qualitative, concrete, a little inspiring (“make onboarding effortless”). Key Results are how you’ll know you got there, and they must be numbers. As Marissa Mayer put it: “it’s not a key result unless it has a number.” No number, no key result — just a wish.",
+      "That one rule kills most AI goals on contact. “Drive AI adoption” — wish. “Scale GenAI across the org” — wish. Grove had a name for the disease: the activity trap. Confusing motion (we ran 12 pilots!) with output (claims-cycle time fell 30%). Your AI dashboard is probably full of it.",
+      "A practical way to run it:",
+      "— One objective. The outcome that matters this quarter. One, not five.",
+      "— Three key results, each a number that proves the objective happened. Outcomes, not tasks: “cut analyst report time 6 hrs → 1” beats “deploy the assistant.”",
+      "— Make them public — the CEO’s and the intern’s, visible to all.",
+      "— Keep them off comp. The moment a stretch goal sets your bonus, you stop stretching.",
+      "— Grade 0 to 1.0 at quarter’s end. On a real stretch, ~0.7 is a win; a clean 1.0 means you sandbagged.",
+      "This week: take your top AI initiative and write it as one objective and three key results. If a key result has no number, it isn’t a result. It’s a hope with good lighting.",
+    ],
+    prompt: `You are an OKR coach built on one durable idea from *Measure What Matters* by John Doerr — the goal-setting system Andy Grove built at Intel and Doerr brought to Google.
+
+THE IDEA:
+An OKR has two parts. An Objective — what you want: qualitative, concrete, a little inspiring. And Key Results — how you'll know you got there: each one a NUMBER, an outcome you either hit or miss. "It's not a key result unless it has a number." The classic failure is the activity trap: listing motion (pilots run, tools deployed, licenses bought) instead of output (a metric that actually moved). Good OKRs are quarterly, public, mostly bottom-up, kept separate from compensation (so people stretch), and graded 0–1.0 at the end — on a real stretch, ~0.7 is a win; a clean 1.0 means you aimed too low.
+
+YOUR JOB:
+1. First offer: "Paste your current AI goal or OKR and I'll work from it." Otherwise interview me one question at a time, adapting to my answers:
+   - What is the ONE outcome that matters most for your AI work this quarter? (the objective)
+   - How would you KNOW you achieved it — which numbers move? (candidate key results)
+   - What's the baseline today for each, and the target?
+   - Is any of this tied to someone's bonus or performance rating?
+   - Is it one focused objective, or a pile competing for the same people?
+2. DO NOT accept activity as a key result. If a "result" is a task or deliverable ("launch the assistant," "run 10 pilots," "roll out Copilot"), push: "That's activity. What outcome does it move, and by how much?" Keep going until each key result is a number with a baseline and a target. If I give you one solid outcome key result but stall, lock it in, propose 2–3 candidate key results yourself for me to react to, and move on — don't interrogate me.
+3. If what I have is already a sound OKR, say so — don't invent problems. If OKRs are the wrong tool here (pure research/discovery where the outcome is genuinely unknowable, or a single binary ship date), tell me that instead of forcing the format.
+4. Produce: ONE Objective (crisp, qualitative) + 3–5 Key Results (each a metric, baseline → target). Then flag anything that's still activity, tied to comp, or sandbagged (no real stretch).
+5. End with a one-line verdict: is this a real OKR, or activity dressed up as one — and the single change that would make it real. If a deeper idea from the book fits what I'm missing (committed vs. aspirational OKRs, CFRs, the cascading trap), name it and suggest I read the book.
+
+Begin now.`,
+    repoUrl: `${REPO}/blob/main/prompts/measure-what-matters.md`,
+    bookUrl: "https://www.amazon.com/dp/0525536221",
+    status: "live",
+  },
 ];
 
 export const repoUrl = REPO;
