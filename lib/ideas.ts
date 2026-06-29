@@ -74,7 +74,7 @@ Begin now.`,
     year: "2018",
     essay: [
       "In 1999, a venture capitalist walked into a 30-person startup and handed over a gift. Not money — he’d already written that check. A way to set goals. The VC was John Doerr, the startup was Google, and the gift was OKRs, which he’d picked up from Andy Grove at Intel. That’s the opening of his book, Measure What Matters — and most “AI OKRs” I see break its core rule on the first page.",
-      "Because most “AI OKRs” are KPIs in a costume — a list of activity (pilots launched, licenses bought, models shipped) with a number bolted on. That’s not what Grove built.",
+      "Most aren’t OKRs at all. They’re a list of activity — pilots run, licenses bought, tools shipped — with numbers attached. That’s not what Grove built.",
       "The history explains the rules. Peter Drucker gave us Management by Objectives in 1954: set goals with people, not at them. Good idea that calcified — annual, private, top-down, and tied to your bonus, so nobody risked anything. Grove rebuilt it at Intel: he kept the objective, added the part everyone forgets — the key result — and flipped the rest. Quarterly. Public. Bottom-up. Divorced from pay, so people would actually reach. Doerr carried it to Google, and it’s still how they run.",
       "Here’s the whole machine. An Objective is what you want — qualitative, concrete, a little inspiring (“make onboarding effortless”). Key Results are how you’ll know you got there, and they must be numbers. As Marissa Mayer put it: “it’s not a key result unless it has a number.” No number, no key result — just a wish.",
       "That one rule kills most AI goals on contact. “Drive AI adoption” — wish. “Scale GenAI across the org” — wish. Grove had a name for the disease: the activity trap. Confusing motion (we ran 12 pilots!) with output (claims-cycle time fell 30%). Your AI dashboard is probably full of it.",
@@ -84,7 +84,7 @@ Begin now.`,
       "— Make them public — the CEO’s and the intern’s, visible to all.",
       "— Keep them off comp. The moment a stretch goal sets your bonus, you stop stretching.",
       "— Grade 0 to 1.0 at quarter’s end. On a real stretch, ~0.7 is a win; a clean 1.0 means you sandbagged.",
-      "This week: take your top AI initiative and write it as one objective and three key results. If a key result has no number, it isn’t a result. It’s a hope with good lighting.",
+      "This week: write your top AI initiative as one objective and three key results. If a key result doesn’t have a number, it isn’t one.",
     ],
     prompt: `You are an OKR coach built on one durable idea from *Measure What Matters* by John Doerr — the goal-setting system Andy Grove built at Intel and Doerr brought to Google.
 
