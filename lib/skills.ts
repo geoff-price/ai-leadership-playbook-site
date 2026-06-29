@@ -4,6 +4,7 @@ export type Skill = {
   title: string;
   book: string;
   author: string;
+  subtitle: string;
   oneLiner: string;
   year: string;
   essay: string[];
@@ -22,6 +23,7 @@ export const skills: Skill[] = [
     title: "Good Strategy / Bad Strategy",
     book: "Good Strategy/Bad Strategy",
     author: "Richard Rumelt",
+    subtitle: "The Difference and Why It Matters",
     oneLiner:
       "Pressure-test an AI roadmap against Rumelt’s test for real strategy — and catch the bad kind before it gets funded.",
     year: "2011",
