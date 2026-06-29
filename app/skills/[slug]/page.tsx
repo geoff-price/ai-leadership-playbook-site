@@ -61,16 +61,8 @@ export default async function SkillPage({ params }: { params: Promise<{ slug: st
           <CopyButton text={s.prompt} />
 
           <p className="meta mt-5">
-            Use Claude with{" "}
-            <a
-              href="https://support.claude.com/en/articles/12512180-use-skills-in-claude"
-              className="hover:text-accent"
-            >
-              Skills
-            </a>
-            ?{" "}
             <a href={s.repoUrl} className="hover:text-accent">
-              Install the full skill →
+              View this prompt on GitHub →
             </a>
           </p>
 

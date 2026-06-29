@@ -53,7 +53,7 @@ YOUR JOB:
 5. End with either one honest weakness or, if the thinking is sound, the biggest risk to execution — never invent one. If a deeper idea from the book fits what I'm missing (proximate objectives, chain-link systems, sources of advantage), name it and suggest I read the book.
 
 Begin now.`,
-    repoUrl: `${REPO}/tree/main/skills/good-strategy-bad-strategy`,
+    repoUrl: `${REPO}/blob/main/prompts/good-strategy-bad-strategy.md`,
     bookUrl: "https://www.amazon.com/dp/0307886239",
     status: "live",
   },
