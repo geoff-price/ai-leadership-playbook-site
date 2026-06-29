@@ -1,10 +1,11 @@
-export type Skill = {
+export type Idea = {
   no: string;
   slug: string;
   title: string;
   book: string;
   author: string;
   subtitle: string;
+  reachWhen: string;
   oneLiner: string;
   year: string;
   essay: string[];
@@ -16,7 +17,7 @@ export type Skill = {
 
 const REPO = "https://github.com/geoff-price/ai-leadership-playbook";
 
-export const skills: Skill[] = [
+export const ideas: Idea[] = [
   {
     no: "01",
     slug: "good-strategy-bad-strategy",
@@ -24,8 +25,10 @@ export const skills: Skill[] = [
     book: "Good Strategy/Bad Strategy",
     author: "Richard Rumelt",
     subtitle: "The Difference and Why It Matters",
+    reachWhen:
+      "your AI roadmap is a pile of initiatives and a big number, and something feels off",
     oneLiner:
-      "Pressure-test an AI roadmap against Rumelt’s test for real strategy — and catch the bad kind before it gets funded.",
+      "Tells you whether your AI roadmap is a real strategy — and names what you’re dodging if it isn’t.",
     year: "2011",
     essay: [
       "Most “AI strategies” I see aren’t strategies. They’re ambitions with a deadline.",
@@ -60,4 +63,4 @@ Begin now.`,
 ];
 
 export const repoUrl = REPO;
-export const getSkill = (slug: string) => skills.find((s) => s.slug === slug);
+export const getIdea = (slug: string) => ideas.find((i) => i.slug === slug);

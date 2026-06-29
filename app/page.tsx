@@ -1,10 +1,10 @@
 import Link from "next/link";
 import Masthead from "@/components/Masthead";
 import Footer from "@/components/Footer";
-import { skills } from "@/lib/skills";
+import { ideas } from "@/lib/ideas";
 
 export default function Home() {
-  const live = skills.filter((s) => s.status === "live");
+  const live = ideas.filter((i) => i.status === "live");
 
   return (
     <>
@@ -29,18 +29,18 @@ export default function Home() {
       {/* The ideas */}
       <section className="wrap pb-20">
         <ol className="reveal border-t border-line" style={{ animationDelay: "260ms" }}>
-          {live.map((s) => (
-            <li key={s.slug}>
+          {live.map((i) => (
+            <li key={i.slug}>
               <Link
-                href={`/skills/${s.slug}`}
+                href={`/ideas/${i.slug}`}
                 className="group grid grid-cols-[1fr_auto] items-start gap-4 border-b border-line py-7 transition-[padding] duration-300 hover:pl-2"
               >
                 <div>
                   <h2 className="text-[1.5rem] leading-tight transition-colors group-hover:text-accent">
-                    {s.title}
+                    {i.title}
                   </h2>
-                  <p className="meta mt-1.5">{s.author} · {s.year}</p>
-                  <p className="mt-3 max-w-[60ch] text-soft">{s.oneLiner}</p>
+                  <p className="meta mt-1.5">{i.author} · {i.year}</p>
+                  <p className="mt-3 max-w-[60ch] text-soft">{i.oneLiner}</p>
                 </div>
                 <span
                   aria-hidden
