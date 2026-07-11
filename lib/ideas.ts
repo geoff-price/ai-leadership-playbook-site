@@ -13,6 +13,7 @@ export type Idea = {
   repoUrl: string;
   bookUrl: string;
   image?: string;
+  published?: string; // ISO date the essay was published, e.g. "2026-07-11"
   status: "live" | "forthcoming";
 };
 
@@ -61,6 +62,7 @@ Begin now.`,
     repoUrl: `${REPO}/blob/main/prompts/good-strategy-bad-strategy.md`,
     bookUrl: "https://www.amazon.com/dp/0307886239",
     image: "/covers/good-strategy-bad-strategy.png",
+    published: "2026-07-11",
     status: "live",
   },
   {

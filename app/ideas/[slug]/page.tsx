@@ -44,6 +44,19 @@ export default async function IdeaPage({ params }: { params: Promise<{ slug: str
           <p className="meta mt-2">
             {idea.author} · {idea.year}
           </p>
+          {idea.published && (
+            <p className="meta mt-1">
+              <time dateTime={idea.published}>
+                Published{" "}
+                {new Date(`${idea.published}T00:00:00Z`).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                  timeZone: "UTC",
+                })}
+              </time>
+            </p>
+          )}
         </header>
 
         {/* Cover illustration */}
