@@ -31,12 +31,13 @@ export const ideas: Idea[] = [
       "Tells you whether your AI roadmap is a real strategy — and names what you’re dodging if it isn’t.",
     year: "2011",
     essay: [
-      "Most “AI strategies” I see aren’t strategies. They’re ambitions with a deadline.",
-      "Richard Rumelt tells a story about a CEO, proud of his plan: grow revenue 20% a year, hold a 20% margin. He called it the 2020 plan, and the whole team had bought in. When Rumelt asked how, the CEO talked about will to win and aiming high.",
-      "His verdict: that’s not a strategy. It’s ambition — a goal with no account of the obstacle in the way, and no read on where the leverage is.",
-      "Swap the numbers and you have most AI roadmaps. “Become an AI-first company.” “20% productivity from GenAI by Q4.” The discipline didn’t change when the technology did. We just stopped naming the obstacle.",
-      "Strategy starts a step back, with a diagnosis — the real problem, in one sentence. “Our people don’t trust the output enough to change how they work” is a diagnosis. “Drive AI adoption” is a wish.",
-      "Take your top AI initiative and write the diagnosis beneath it: the obstacle, not the goal. If you can’t, it’s a roadmap, not a strategy.",
+      "Most companies don’t have an AI strategy. They have an AI activity list.",
+      "Richard Rumelt argues that real strategy is three things working together: an honest diagnosis of the core obstacle, a guiding policy for dealing with it, and coherent actions that carry it out. He calls it the kernel. Take one part away and what’s left isn’t strategy — it’s ambition, or a to-do list.",
+      "Rumelt’s own example is a CEO whose whole plan was to grow revenue 20% a year and hold a 20% margin — the “2020 plan.” Asked what strategy would get him there, he talked about the will to win. A goal with the hard part left out.",
+      "Swap the numbers and you have most AI plans. A wall of pilots, a tool rollout, a center of excellence, an “AI-first” vision stapled on top. Plenty of motion, no diagnosis. Nobody named the obstacle all that activity is supposed to move.",
+      "The translation I use is three questions. Reality: what’s actually preventing value right now? Bet: given that, what are we choosing to do — and choosing not to? Execution: which workflows, capabilities, and decision rights reinforce the bet instead of fighting it?",
+      "Take a familiar plan — “roll the assistant out to everyone.” That’s a deployment schedule, not a strategy. Run it through the three questions and the real problem surfaces. Reality: people don’t trust the output enough to change how they work. Bet: stop counting licenses; prove the tool in three high-stakes workflows where trust is worth earning. Execution: redesign those workflows around it, and let the early wins pull the rest of the org in.",
+      "This week, write the one-sentence diagnosis under your own AI plan. If you can’t, it’s an activity list, not a strategy — and that’s the first thing to fix.",
     ],
     prompt: `You are a strategy coach built on one durable idea from *Good Strategy/Bad Strategy* by Richard Rumelt.
 
