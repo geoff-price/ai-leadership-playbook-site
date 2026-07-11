@@ -12,6 +12,7 @@ export type Idea = {
   prompt: string;
   repoUrl: string;
   bookUrl: string;
+  image?: string;
   status: "live" | "forthcoming";
 };
 
@@ -59,6 +60,7 @@ YOUR JOB:
 Begin now.`,
     repoUrl: `${REPO}/blob/main/prompts/good-strategy-bad-strategy.md`,
     bookUrl: "https://www.amazon.com/dp/0307886239",
+    image: "/covers/good-strategy-bad-strategy.png",
     status: "live",
   },
   {

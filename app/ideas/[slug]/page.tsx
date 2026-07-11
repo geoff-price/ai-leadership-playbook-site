@@ -12,7 +12,16 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const i = getIdea(slug);
-  return { title: i ? `${i.title} — Geoff Price` : "Geoff Price — AI leadership" };
+  const base = "https://geoffprice.vercel.app";
+  return {
+    title: i ? `${i.title} — Geoff Price` : "Geoff Price — AI leadership",
+    ...(i?.image
+      ? {
+          openGraph: { images: [{ url: `${base}${i.image}` }] },
+          twitter: { card: "summary_large_image", images: [`${base}${i.image}`] },
+        }
+      : {}),
+  };
 }
 
 export default async function IdeaPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -36,6 +45,16 @@ export default async function IdeaPage({ params }: { params: Promise<{ slug: str
             {idea.author} · {idea.year}
           </p>
         </header>
+
+        {/* Cover illustration */}
+        {idea.image && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={idea.image}
+            alt={`${idea.title} — illustration`}
+            className="mt-10 w-full border border-line"
+          />
+        )}
 
         {/* The essay — the writing itself (canonical home; syndicated to LinkedIn) */}
         <div className="mt-10 space-y-5 text-[1.12rem] leading-relaxed">
