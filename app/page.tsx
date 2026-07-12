@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <Masthead />
 
-      {/* Intro — a quote, then a plain personal line */}
+      {/* Intro: a quote, then a plain personal line */}
       <section className="wrap pt-16 pb-14 md:pt-24">
         <blockquote className="reveal max-w-[30ch]" style={{ animationDelay: "60ms" }}>
           <span className="mb-7 block h-px w-9 bg-accent" aria-hidden />
@@ -21,7 +21,7 @@ export default function Home() {
         </blockquote>
         <p className="reveal mt-10 max-w-[54ch] text-soft" style={{ animationDelay: "160ms" }}>
           Simple insights from books I’ve read over the years, brought to bear on AI
-          leadership. Part of it is just for me — a way to keep some coherence as the noise
+          leadership. Part of it is just for me, a way to keep some coherence as the noise
           gets louder. Take what’s useful.
         </p>
       </section>

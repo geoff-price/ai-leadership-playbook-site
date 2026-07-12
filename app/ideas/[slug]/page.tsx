@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const i = getIdea(slug);
   const base = "https://geoffprice.vercel.app";
   return {
-    title: i ? `${i.title} — Geoff Price` : "Geoff Price — AI leadership",
+    title: i ? `${i.title} · Geoff Price` : "Geoff Price · AI leadership",
     ...(i?.image
       ? {
           openGraph: { images: [{ url: `${base}${i.image}` }] },
@@ -50,7 +50,7 @@ export default async function IdeaPage({ params }: { params: Promise<{ slug: str
         <header className="mt-10">
           {idea.headline ? (
             <>
-              {/* Source book — the credit, quiet. The idea is the star. */}
+              {/* Source book: the credit, quiet. The idea is the star. */}
               <p className="meta">
                 {idea.title} · {idea.author}, {idea.year}
               </p>
@@ -88,12 +88,12 @@ export default async function IdeaPage({ params }: { params: Promise<{ slug: str
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={idea.image}
-            alt={`${idea.title} — illustration`}
+            alt={`${idea.title} illustration`}
             className="mt-10 w-full border border-line"
           />
         )}
 
-        {/* The essay — the writing itself (canonical home; syndicated to LinkedIn) */}
+        {/* The essay: the writing itself (canonical home; syndicated to LinkedIn) */}
         <div className="mt-10 space-y-5 text-[1.12rem] leading-relaxed">
           {idea.essay.map((p, n) => (
             <p key={n}>{p}</p>
@@ -105,8 +105,8 @@ export default async function IdeaPage({ params }: { params: Promise<{ slug: str
           <h2 className="meta mb-4">Apply it</h2>
           <p className="mb-6 max-w-[60ch] text-[1.05rem]">
             <span className="text-soft">Reach for it when</span> {idea.reachWhen}.{" "}
-            <span className="text-soft">Paste the prompt into ChatGPT, Claude, or Copilot —
-            it asks you a few sharp questions, then tells you whether you’ve actually got a
+            <span className="text-soft">Paste the prompt into ChatGPT, Claude, or Copilot.
+            It asks you a few sharp questions, then tells you whether you’ve actually got a
             strategy and names what you’re dodging. Runs on your AI, not mine.</span>
           </p>
 
