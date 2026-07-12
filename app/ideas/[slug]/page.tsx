@@ -95,9 +95,27 @@ export default async function IdeaPage({ params }: { params: Promise<{ slug: str
 
         {/* The essay: the writing itself (canonical home; syndicated to LinkedIn) */}
         <div className="mt-10 space-y-5 text-[1.12rem] leading-relaxed">
-          {idea.essay.map((p, n) => (
-            <p key={n}>{p}</p>
-          ))}
+          {idea.essay.map((block, n) =>
+            typeof block === "string" ? (
+              <p key={n}>{block}</p>
+            ) : block.ordered ? (
+              <ol key={n} className="list-decimal space-y-2 pl-6 marker:text-accent marker:font-medium">
+                {block.list.map((item, j) => (
+                  <li key={j} className="pl-1">
+                    {item}
+                  </li>
+                ))}
+              </ol>
+            ) : (
+              <ul key={n} className="list-disc space-y-2 pl-6 marker:text-accent">
+                {block.list.map((item, j) => (
+                  <li key={j} className="pl-1">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            )
+          )}
         </div>
 
         {/* Apply it */}

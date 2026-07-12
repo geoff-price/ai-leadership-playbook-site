@@ -8,7 +8,7 @@ export type Idea = {
   reachWhen: string;
   oneLiner: string;
   year: string;
-  essay: string[];
+  essay: (string | { list: string[]; ordered?: boolean })[];
   prompt: string;
   repoUrl: string;
   bookUrl: string;
@@ -35,11 +35,36 @@ export const ideas: Idea[] = [
       "Tells you whether your AI roadmap is a real strategy, and names what you’re dodging if it isn’t.",
     year: "2011",
     essay: [
-      "Richard Rumelt argues that real strategy is three things working together: an honest diagnosis of the core obstacle, a guiding policy for dealing with it, and coherent actions that carry it out. He calls it the kernel. Take one part away and what’s left isn’t strategy. It’s ambition, or a to-do list.",
+      "Richard Rumelt argues that real strategy is three things working together:",
+      {
+        ordered: true,
+        list: [
+          "An honest diagnosis of the core obstacle.",
+          "A guiding policy for dealing with it.",
+          "Coherent actions that carry it out.",
+        ],
+      },
+      "He calls it the kernel. Take one part away and what’s left isn’t strategy. It’s ambition, or a to-do list.",
       "Rumelt’s own example is a CEO whose whole plan was to grow revenue 20% a year and hold a 20% margin. He called it the “2020 plan.” Asked what strategy would get him there, he talked about the will to win. A goal with the hard part left out.",
       "Swap the numbers and you have most AI plans. A wall of pilots, a tool rollout, a center of excellence, an “AI-first” vision stapled on top. Plenty of motion, no diagnosis. Nobody named the obstacle all that activity is supposed to move.",
-      "The translation I use is three questions. Reality: what’s actually preventing value right now? Bet: given that, what are we choosing to do, and choosing not to? Execution: which workflows, capabilities, and decision rights reinforce the bet instead of fighting it?",
-      "Take a familiar plan: “roll the assistant out to everyone.” That’s a deployment schedule, not a strategy. Run it through the three questions and the real problem surfaces. Reality: people don’t trust the output enough to change how they work. Bet: stop counting licenses; prove the tool in three high-stakes workflows where trust is worth earning. Execution: redesign those workflows around it, and let the early wins pull the rest of the org in.",
+      "The translation I use is three questions:",
+      {
+        ordered: true,
+        list: [
+          "Reality: what’s actually preventing value right now?",
+          "Bet: given that, what are we choosing to do, and choosing not to?",
+          "Execution: which workflows, capabilities, and decision rights reinforce the bet instead of fighting it?",
+        ],
+      },
+      "Take a familiar plan: “roll the AI agent out to everyone.” That’s a deployment schedule, not a strategy. Run it through the three questions and the real problem surfaces:",
+      {
+        ordered: true,
+        list: [
+          "Reality: people don’t trust the output enough to change how they work.",
+          "Bet: stop counting users; prove the tool in one or two high-stakes workflows where trust is worth earning.",
+          "Execution: redesign those workflows around it, and let the early wins pull the rest of the org in.",
+        ],
+      },
       "This week, write the one-sentence diagnosis under your own AI plan. If you can’t, it’s an activity list, not a strategy, and that’s the first thing to fix.",
     ],
     prompt: `You are a strategy coach built on one durable idea from *Good Strategy/Bad Strategy* by Richard Rumelt.
@@ -88,11 +113,15 @@ Begin now.`,
       "Here’s the whole machine. An Objective is what you want: qualitative, concrete, a little inspiring (“make onboarding effortless”). Key Results are how you’ll know you got there, and they must be numbers. One line from the book does the most work: “it’s not a key result unless it has a number.” No number, no key result. Just a wish.",
       "That one rule kills most AI goals on contact. “Drive AI adoption”: a wish. “Scale GenAI across the org”: a wish. Grove had a name for the disease: the activity trap. Confusing motion (we ran 12 pilots!) with output (claims-cycle time fell 30%). Your AI dashboard is probably full of it.",
       "A practical way to run it:",
-      "• One objective. The outcome that matters this quarter. One, not five.",
-      "• Three key results, each a number that proves the objective happened. Outcomes, not tasks: “cut analyst report time from 6 hrs to 1” beats “deploy the assistant.”",
-      "• Make them public: the CEO’s and the intern’s, visible to all.",
-      "• Keep them off comp. The moment a stretch goal sets your bonus, you stop stretching.",
-      "• Grade 0 to 1.0 at quarter’s end. On a real stretch, ~0.7 is a win; a clean 1.0 means you sandbagged.",
+      {
+        list: [
+          "One objective. The outcome that matters this quarter. One, not five.",
+          "Three key results, each a number that proves the objective happened. Outcomes, not tasks: “cut analyst report time from 6 hrs to 1” beats “deploy the assistant.”",
+          "Make them public: the CEO’s and the intern’s, visible to all.",
+          "Keep them off comp. The moment a stretch goal sets your bonus, you stop stretching.",
+          "Grade 0 to 1.0 at quarter’s end. On a real stretch, ~0.7 is a win; a clean 1.0 means you sandbagged.",
+        ],
+      },
       "This week: write your top AI initiative as one objective and three key results. If a key result doesn’t have a number, it isn’t one.",
     ],
     prompt: `You are an OKR coach built on one durable idea from *Measure What Matters* by John Doerr, the goal-setting system Andy Grove built at Intel and Doerr brought to Google.
