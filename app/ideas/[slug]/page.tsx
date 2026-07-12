@@ -103,11 +103,9 @@ export default async function IdeaPage({ params }: { params: Promise<{ slug: str
         {/* Apply it */}
         <section className="mt-14 border-t border-line pt-10">
           <h2 className="meta mb-4">Apply it</h2>
-          <p className="mb-6 max-w-[60ch] text-[1.05rem]">
-            <span className="text-soft">Reach for it when</span> {idea.reachWhen}.{" "}
-            <span className="text-soft">Paste the prompt into ChatGPT, Claude, or Copilot.
-            It asks you a few sharp questions, then tells you whether you’ve actually got a
-            strategy and names what you’re dodging. Runs on your AI, not mine.</span>
+          <p className="mb-6 max-w-[62ch] text-[1.05rem] text-soft">
+            Reach for it when {idea.reachWhen}. Paste it into ChatGPT, Claude, or Copilot and
+            answer a few questions. It runs on your own AI.
           </p>
 
           <div className="mb-5 max-h-72 overflow-auto border border-line bg-black/20 p-5 font-mono text-[0.78rem] leading-relaxed text-soft whitespace-pre-wrap">

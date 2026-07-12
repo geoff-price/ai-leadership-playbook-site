@@ -30,7 +30,7 @@ export const ideas: Idea[] = [
     author: "Richard Rumelt",
     subtitle: "The Difference and Why It Matters",
     reachWhen:
-      "your AI roadmap is a pile of initiatives and a big number, and something feels off",
+      "your AI roadmap is a stack of initiatives with a target on top, and you suspect it isn’t really a strategy",
     oneLiner:
       "Tells you whether your AI roadmap is a real strategy, and names what you’re dodging if it isn’t.",
     year: "2011",
