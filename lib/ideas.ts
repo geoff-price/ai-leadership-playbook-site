@@ -35,7 +35,7 @@ export const ideas: Idea[] = [
       "Tells you whether your AI roadmap is a real strategy, and names what you’re dodging if it isn’t.",
     year: "2011",
     essay: [
-      "Richard Rumelt argues that real strategy is three things working together:",
+      "In one of my favorite books on strategy, Good Strategy/Bad Strategy, Richard Rumelt argues that real strategy is three things working together:",
       {
         list: [
           "An honest diagnosis of the core obstacle.",
