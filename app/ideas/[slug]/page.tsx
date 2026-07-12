@@ -122,8 +122,7 @@ export default async function IdeaPage({ params }: { params: Promise<{ slug: str
         <section className="mt-14 border-t border-line pt-10">
           <h2 className="meta mb-4">Apply it</h2>
           <p className="mb-6 max-w-[62ch] text-[1.05rem] text-soft">
-            Reach for it when {idea.reachWhen}. Paste it into ChatGPT, Claude, or Copilot and
-            answer a few questions. It runs on your own AI.
+            Reach for it when {idea.reachWhen}. Paste it in and answer a few questions.
           </p>
 
           <div className="mb-5 max-h-72 overflow-auto border border-line bg-black/20 p-5 font-mono text-[0.78rem] leading-relaxed text-soft whitespace-pre-wrap">

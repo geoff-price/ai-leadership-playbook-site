@@ -37,7 +37,6 @@ export const ideas: Idea[] = [
     essay: [
       "Richard Rumelt argues that real strategy is three things working together:",
       {
-        ordered: true,
         list: [
           "An honest diagnosis of the core obstacle.",
           "A guiding policy for dealing with it.",
@@ -49,7 +48,6 @@ export const ideas: Idea[] = [
       "Swap the numbers and you have most AI plans. A wall of pilots, a tool rollout, a center of excellence, an “AI-first” vision stapled on top. Plenty of motion, no diagnosis. Nobody named the obstacle all that activity is supposed to move.",
       "The translation I use is three questions:",
       {
-        ordered: true,
         list: [
           "Reality: what’s actually preventing value right now?",
           "Bet: given that, what are we choosing to do, and choosing not to?",
@@ -58,7 +56,6 @@ export const ideas: Idea[] = [
       },
       "Take a familiar plan: “roll the AI agent out to everyone.” That’s a deployment schedule, not a strategy. Run it through the three questions and the real problem surfaces:",
       {
-        ordered: true,
         list: [
           "Reality: people don’t trust the output enough to change how they work.",
           "Bet: stop counting users; prove the tool in one or two high-stakes workflows where trust is worth earning.",
