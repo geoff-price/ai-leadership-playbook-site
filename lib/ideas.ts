@@ -15,6 +15,7 @@ export type Idea = {
   image?: string;
   published?: string; // ISO date the essay was published, e.g. "2026-07-11"
   headline?: string; // the essay's own idea, used as the H1 (book title becomes a kicker)
+  bookNote?: string; // one line on the author/book, for readers who don't know it
   status: "live" | "forthcoming";
 };
 
@@ -64,6 +65,8 @@ Begin now.`,
     image: "/covers/good-strategy-bad-strategy.png",
     published: "2026-07-11",
     headline: "Most companies don’t have an AI strategy. They have an AI activity list.",
+    bookNote:
+      "He’s a longtime professor at UCLA Anderson and one of the most respected voices in strategy; the book is widely regarded as a modern classic.",
     status: "live",
   },
   {
@@ -112,6 +115,8 @@ YOUR JOB:
 Begin now.`,
     repoUrl: `${REPO}/blob/main/prompts/measure-what-matters.md`,
     bookUrl: "https://www.amazon.com/dp/0525536221",
+    bookNote:
+      "He’s a venture capitalist at Kleiner Perkins — an early backer of Google and Amazon — who picked up OKRs from Andy Grove at Intel.",
     status: "live",
   },
 ];

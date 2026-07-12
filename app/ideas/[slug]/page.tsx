@@ -122,8 +122,13 @@ export default async function IdeaPage({ params }: { params: Promise<{ slug: str
             </a>
           </p>
 
-          <p className="mt-10 text-soft">
-            This is one idea from the book. If it’s useful,{" "}
+          <p className="mt-10 max-w-[62ch] text-soft">
+            <em>
+              {idea.title}
+              {idea.subtitle ? `: ${idea.subtitle}` : ""}
+            </em>{" "}
+            by {idea.author} ({idea.year}).
+            {idea.bookNote ? ` ${idea.bookNote}` : ""} This is one idea from it;{" "}
             <a href={idea.bookUrl} className="link">
               read the rest
             </a>
