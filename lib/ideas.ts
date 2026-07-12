@@ -143,8 +143,7 @@ Begin now.`,
     bookUrl: "https://www.amazon.com/dp/0525536221",
     bookNote:
       "He’s a venture capitalist at Kleiner Perkins, an early backer of Google and Amazon, who picked up OKRs from Andy Grove at Intel.",
-    headline: "Most “AI OKRs” aren’t OKRs. They’re activity with numbers.",
-    status: "live",
+    status: "forthcoming",
   },
 ];
 

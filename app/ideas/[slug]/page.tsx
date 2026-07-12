@@ -6,7 +6,7 @@ import CopyButton from "@/components/CopyButton";
 import { getIdea, ideas } from "@/lib/ideas";
 
 export function generateStaticParams() {
-  return ideas.map((i) => ({ slug: i.slug }));
+  return ideas.filter((i) => i.status === "live").map((i) => ({ slug: i.slug }));
 }
 
 function formatDate(iso: string) {
@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function IdeaPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const idea = getIdea(slug);
-  if (!idea) notFound();
+  if (!idea || idea.status !== "live") notFound();
 
   return (
     <>

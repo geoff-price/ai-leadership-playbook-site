@@ -5,6 +5,7 @@ import { ideas } from "@/lib/ideas";
 
 export default function Home() {
   const live = ideas.filter((i) => i.status === "live");
+  const upNext = ideas.filter((i) => i.status === "forthcoming");
 
   return (
     <>
@@ -49,6 +50,20 @@ export default function Home() {
                   →
                 </span>
               </Link>
+            </li>
+          ))}
+          {upNext.map((i) => (
+            <li
+              key={i.slug}
+              className="grid grid-cols-[1fr_auto] items-start gap-4 border-b border-line py-7 opacity-55"
+            >
+              <div>
+                <h2 className="text-[1.5rem] leading-tight">{i.title}</h2>
+                <p className="meta mt-1.5">
+                  {i.author} · {i.year}
+                </p>
+              </div>
+              <span className="meta pt-2">Up next</span>
             </li>
           ))}
         </ol>
