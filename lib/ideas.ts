@@ -14,6 +14,7 @@ export type Idea = {
   bookUrl: string;
   image?: string;
   published?: string; // ISO date the essay was published, e.g. "2026-07-11"
+  headline?: string; // the essay's own idea, used as the H1 (book title becomes a kicker)
   status: "live" | "forthcoming";
 };
 
@@ -33,7 +34,6 @@ export const ideas: Idea[] = [
       "Tells you whether your AI roadmap is a real strategy — and names what you’re dodging if it isn’t.",
     year: "2011",
     essay: [
-      "Most companies don’t have an AI strategy. They have an AI activity list.",
       "Richard Rumelt argues that real strategy is three things working together: an honest diagnosis of the core obstacle, a guiding policy for dealing with it, and coherent actions that carry it out. He calls it the kernel. Take one part away and what’s left isn’t strategy — it’s ambition, or a to-do list.",
       "Rumelt’s own example is a CEO whose whole plan was to grow revenue 20% a year and hold a 20% margin — the “2020 plan.” Asked what strategy would get him there, he talked about the will to win. A goal with the hard part left out.",
       "Swap the numbers and you have most AI plans. A wall of pilots, a tool rollout, a center of excellence, an “AI-first” vision stapled on top. Plenty of motion, no diagnosis. Nobody named the obstacle all that activity is supposed to move.",
@@ -63,6 +63,7 @@ Begin now.`,
     bookUrl: "https://www.amazon.com/dp/0307886239",
     image: "/covers/good-strategy-bad-strategy.png",
     published: "2026-07-11",
+    headline: "Most companies don’t have an AI strategy. They have an AI activity list.",
     status: "live",
   },
   {

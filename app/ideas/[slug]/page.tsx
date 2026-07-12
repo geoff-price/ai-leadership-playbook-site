@@ -9,6 +9,15 @@ export function generateStaticParams() {
   return ideas.map((i) => ({ slug: i.slug }));
 }
 
+function formatDate(iso: string) {
+  return new Date(`${iso}T00:00:00Z`).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC",
+  });
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const i = getIdea(slug);
@@ -39,23 +48,38 @@ export default async function IdeaPage({ params }: { params: Promise<{ slug: str
         </Link>
 
         <header className="mt-10">
-          <h1 className="text-[2rem] leading-tight md:text-[2.6rem]">{idea.title}</h1>
-          <p className="mt-2 text-[1.05rem] italic text-soft">{idea.subtitle}</p>
-          <p className="meta mt-2">
-            {idea.author} · {idea.year}
-          </p>
-          {idea.published && (
-            <p className="meta mt-1">
-              <time dateTime={idea.published}>
-                Published{" "}
-                {new Date(`${idea.published}T00:00:00Z`).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                  timeZone: "UTC",
-                })}
-              </time>
-            </p>
+          {idea.headline ? (
+            <>
+              {/* Source book — the credit, quiet. The idea is the star. */}
+              <p className="meta">
+                {idea.title} · {idea.author}, {idea.year}
+              </p>
+              <h1 className="mt-3 text-[2rem] leading-tight md:text-[2.6rem]">
+                {idea.headline}
+              </h1>
+              <p className="meta mt-3">
+                By Geoff Price
+                {idea.published && (
+                  <>
+                    {" · "}
+                    <time dateTime={idea.published}>{formatDate(idea.published)}</time>
+                  </>
+                )}
+              </p>
+            </>
+          ) : (
+            <>
+              <h1 className="text-[2rem] leading-tight md:text-[2.6rem]">{idea.title}</h1>
+              <p className="mt-2 text-[1.05rem] italic text-soft">{idea.subtitle}</p>
+              <p className="meta mt-2">
+                {idea.author} · {idea.year}
+              </p>
+              {idea.published && (
+                <p className="meta mt-1">
+                  <time dateTime={idea.published}>Published {formatDate(idea.published)}</time>
+                </p>
+              )}
+            </>
           )}
         </header>
 
