@@ -25,6 +25,11 @@ export default function Home() {
           leadership. Part of it is just for me, a way to keep some coherence as the noise
           gets louder. Take what’s useful.
         </p>
+        <p className="reveal mt-6" style={{ animationDelay: "220ms" }}>
+          <Link href="/model" className="link">
+            Read them as one operating model →
+          </Link>
+        </p>
       </section>
 
       {/* The ideas */}
