@@ -3,6 +3,7 @@ import Masthead from "@/components/Masthead";
 import Footer from "@/components/Footer";
 import { stages } from "@/lib/model";
 import { getIdea } from "@/lib/ideas";
+import LoopDiagram from "@/components/LoopDiagram";
 
 export const metadata = {
   title: "The operating model · Geoff Price",
@@ -34,8 +35,13 @@ export default function ModelPage() {
           </p>
         </header>
 
-        {/* The loop */}
-        <ol className="reveal mt-12 border-t border-line" style={{ animationDelay: "200ms" }}>
+        {/* The loop, as a picture */}
+        <div className="reveal mt-14" style={{ animationDelay: "180ms" }}>
+          <LoopDiagram />
+        </div>
+
+        {/* The loop, stage by stage */}
+        <ol className="reveal mt-14 border-t border-line" style={{ animationDelay: "300ms" }}>
           {stages.map((stage) => {
             const idea = getIdea(stage.slug);
             const live = idea?.status === "live";
