@@ -24,14 +24,17 @@ export default function ModelPage() {
         <header className="reveal mt-10" style={{ animationDelay: "60ms" }}>
           <p className="meta">The operating model</p>
           <h1 className="mt-3 text-[2rem] leading-tight md:text-[2.6rem]">
-            Four questions, in order.
+            Four moves. Call it FLIP.
           </h1>
           <p className="mt-6 max-w-[58ch] text-[1.12rem] leading-relaxed text-soft">
             Each piece here takes one idea from one book. Read together, they are a single
-            decision loop for AI leadership. Most programs jump straight to the last question,
-            counting pilots and seats, and wonder why the dashboards stay green while nothing
-            moves. AI is an operating-model problem, not a tool problem, and the order is the
-            point.
+            decision loop for AI leadership: <span className="text-text">Frame</span> the
+            obstacle, <span className="text-text">Lock</span> onto the one move,{" "}
+            <span className="text-text">Isolate</span> the constraint,{" "}
+            <span className="text-text">Prove</span> it works. Most programs skip to the last
+            one, counting pilots and seats, and wonder why the dashboards stay green while
+            nothing moves. AI is an operating-model problem, not a tool problem, and the order
+            is the point.
           </p>
         </header>
 

@@ -21,16 +21,16 @@ export const stages: Stage[] = [
   },
   {
     no: "02",
-    verb: "Choose",
+    verb: "Lock",
     question: "Which one problem is worth solving, and winnable?",
-    gist: "Out of the whole tangle, forge the single problem that is both important and addressable, then concentrate your force there.",
+    gist: "Out of the whole tangle, lock onto the single problem that is both important and addressable, and put your force there.",
     slug: "the-crux",
   },
   {
     no: "03",
-    verb: "Locate",
+    verb: "Isolate",
     question: "Where in the flow does the problem actually bind?",
-    gist: "Find the one step that governs output, and point AI at that, not at whatever happens to be easiest to automate.",
+    gist: "Isolate the one step that governs output, and point AI at that, not at whatever happens to be easiest to automate.",
     slug: "the-goal",
   },
   {
